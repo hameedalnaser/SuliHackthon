@@ -1,0 +1,3 @@
+# SuliHackthon
+
+Soil AI Project
