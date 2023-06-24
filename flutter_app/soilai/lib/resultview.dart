@@ -31,19 +31,129 @@ class _NewPageState extends State<NewPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    if(stringValue1 != null && stringValue1[16]=="0"){
+      return Scaffold(
       appBar: AppBar(
         title: Text('Results'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('String Value 1: ${stringValue1}'),
-            Text('String Value 2: ${stringValue2}'),
-          ],
+      body: SingleChildScrollView(child: 
+      Container(child: 
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [Container(
+          color: Color.fromARGB(255, 2, 87, 4), // Background color for the title
+          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: Text('High Soil Fertility',style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.bold),),
         ),
-      ),
+        SizedBox(height: 20,),
+        Container(
+           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: 
+          Text('Crops Recommendations:',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+        ),
+        Container(
+          decoration: BoxDecoration(
+          color: Color.fromARGB(255, 234, 238, 239), // Background color for the chat container
+          borderRadius: BorderRadius.circular(10.0), // Rounded corners with a radius of 10
+        ),
+
+           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: 
+          Text(' ${stringValue2}',style: TextStyle(fontSize: 18,fontWeight: FontWeight.normal)),
+        ),  
+      ],),),),
     );
+    //   return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text('Results'),
+    //   ),
+    //   body: Center(
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.center,
+    //       children: [
+    //         Text('High Soil Fertility'),
+    //         Text('Crops Recommendations: ${stringValue2}'),
+    //       ],
+    //     ),
+    //   ),
+    // );
+    }else if(stringValue1 != null && stringValue1[16]=="1"){
+      return Scaffold(
+      appBar: AppBar(
+        title: Text('Results'),
+      ),
+      body: SingleChildScrollView(child: 
+      Container(child: 
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [Container(
+          color: Color.fromARGB(255, 109, 107, 6), // Background color for the title
+          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: Text('Medium Soil Fertility',style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.bold),),
+        ),
+        SizedBox(height: 50,),
+        Container(
+           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: 
+          Text('Crops Recommendations:',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+        ),
+        Container(
+          decoration: BoxDecoration(
+          color: Color.fromARGB(255, 234, 238, 239), // Background color for the chat container
+          borderRadius: BorderRadius.circular(10.0), // Rounded corners with a radius of 10
+        ),
+           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: 
+          Text('${stringValue2}',style: TextStyle(fontSize: 18,fontWeight: FontWeight.normal)),
+        ),  
+      ],),),),
+    );
+    }else{
+      return Scaffold(
+      appBar: AppBar(
+        title: Text('Results'),
+      ),
+      body: SingleChildScrollView(child: 
+      Container(child: 
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [Container(
+          color: const Color.fromARGB(255, 136, 14, 14), // Background color for the title
+          padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: Text('Low Soil Fertility',style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.bold),),
+        ),
+        SizedBox(height: 50,),
+        Container(
+           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: 
+          Text('Crops Recommendations:',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+        ),
+        Container(
+          decoration: BoxDecoration(
+          color: Color.fromARGB(255, 234, 238, 239), // Background color for the chat container
+          borderRadius: BorderRadius.circular(10.0), // Rounded corners with a radius of 10
+        ),
+           padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
+          child: 
+          Text('${stringValue2}',style: TextStyle(fontSize: 18,fontWeight: FontWeight.normal)),
+        ),  
+      ],),),),
+    );
+    //   return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text('Results'),
+    //   ),
+    //   body: Center(
+    //     child: Column(
+    //       mainAxisAlignment: MainAxisAlignment.center,
+    //       children: [
+    //         Text('Low Soil Fertility'),
+    //         Text('Crops Recommendations: ${stringValue2}'),
+    //       ],
+    //     ),
+    //   ),
+    // );
+    }
+    
   }
 }

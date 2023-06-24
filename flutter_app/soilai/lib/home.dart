@@ -101,7 +101,12 @@ Route<dynamic> _createRoute(Widget page) {
         // onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) =>Layout_Page()));}
         // ),
         centerTitle: true,),
-        body: isLoading ? Center(child: Column(children: [
+        body: isLoading ? Center(
+          
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
           CircularProgressIndicator(),
           SizedBox(height: 80,),
           Text("Loading...")
@@ -139,7 +144,7 @@ Route<dynamic> _createRoute(Widget page) {
                   borderSide: BorderSide(color: Color.fromRGBO(77, 51, 31, 1))
                 ),
                 border: OutlineInputBorder(),
-                labelText: 'Nitrogen Content',
+                labelText: 'Nitrogen Content (ppm)',
                 icon: Icon(Icons.nature, color: Color.fromRGBO(77, 51, 31, 1)))))),
                         
                         
@@ -168,7 +173,7 @@ Route<dynamic> _createRoute(Widget page) {
                   borderSide: BorderSide(color: Color.fromRGBO(77, 51, 31, 1))
                 ),
                 border: OutlineInputBorder(),
-                labelText: 'Phosphorous Content',
+                labelText: 'Phosphorous Content (ppm)',
                 icon: Icon(Icons.nature, color: Color.fromRGBO(77, 51, 31, 1)))))),
                         
 
@@ -198,7 +203,7 @@ Route<dynamic> _createRoute(Widget page) {
                   borderSide: BorderSide(color: Color.fromRGBO(77, 51, 31, 1))
                 ),
                 border: OutlineInputBorder(),
-                labelText: 'Potassium Content',
+                labelText: 'Potassium Content (ppm)',
                 icon: Icon(Icons.nature, color: Color.fromRGBO(77, 51, 31, 1)))))),
                         
 
@@ -229,7 +234,7 @@ Route<dynamic> _createRoute(Widget page) {
                   borderSide: BorderSide(color: Color.fromRGBO(77, 51, 31, 1))
                 ),
                 border: OutlineInputBorder(),
-                labelText: 'PH value',
+                labelText: 'PH value (ph)',
                 icon: Icon(Icons.nature, color: Color.fromRGBO(77, 51, 31, 1)))))),
                         
                   Padding(
